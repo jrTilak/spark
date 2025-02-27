@@ -4,14 +4,15 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "../../global.css";
 import useLoadFonts from "@/hooks/use-load-fonts";
-
 import { Theme, ThemeProvider, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import * as React from "react";
 import { NAV_THEME } from "@/constants/theme";
 import { useColorScheme } from "@/hooks/use-color-schema";
+import { SheetProvider } from "react-native-actions-sheet";
+import "@/lib/sheet";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -46,13 +47,17 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-      <QueryClientProvider client={queryClient}>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="index" />
-        </Stack>
-        <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
-      </QueryClientProvider>
-    </ThemeProvider>
+    <GestureHandlerRootView>
+      <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+        <QueryClientProvider client={queryClient}>
+          <SheetProvider>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="index" />
+            </Stack>
+          </SheetProvider>
+          <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+        </QueryClientProvider>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }

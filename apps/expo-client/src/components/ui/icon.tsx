@@ -1,10 +1,10 @@
 import { ICON_COLORS, IconColorKey } from "@/constants/theme";
 import { LucideIcon, LucideProps } from "lucide-react-native";
 
-type Props = {
+export type IconProps = {
   icon: LucideIcon;
   size?: keyof typeof sizes | number;
-  color: IconColorKey
+  color: IconColorKey;
 } & LucideProps;
 
 const sizes = {
@@ -13,7 +13,7 @@ const sizes = {
   lg: 24,
 } as const;
 
-const Icon = ({ icon: IconComponent, size = "md", color, ...props }: Props) => {
+const Icon = ({ icon: IconComponent, size = "md", color, ...props }: IconProps) => {
   return (
     <IconComponent
       size={typeof size === "number" ? size : sizes[size]}

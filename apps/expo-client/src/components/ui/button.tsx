@@ -9,6 +9,8 @@ const buttonVariants = cva("group flex flex-row items-center justify-center roun
     variant: {
       default: "bg-primary active:opacity-90",
       ghost: "active:bg-accent",
+      secondary: "bg-secondary active:opacity-80",
+      outline: "border border-input active:bg-accent",
     },
     size: {
       default: "h-12 px-5 py-3 native:h-12",
@@ -28,6 +30,8 @@ const buttonTextVariants = cva("text-sm native:text-base font-semibold text-fore
     variant: {
       default: "text-primary-foreground",
       ghost: "group-active:text-accent-foreground",
+      secondary: "text-secondary-foreground group-active:text-secondary-foreground",
+      outline: "group-active:text-accent-foreground",
     },
     size: {
       default: "",

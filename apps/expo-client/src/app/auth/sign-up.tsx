@@ -13,14 +13,17 @@ import { View } from "react-native";
 import { Link } from "expo-router";
 import { P } from "@/components/ui/p";
 import AuthLayout from "@/components/layout/auth-layout";
+import { InputWithIcon } from "@/components/ui/input/input-with-icon";
+import { UserIcon } from "lucide-react-native";
 
-const FormSchema = authValidators.signinWithEmailSchema();
+const FormSchema = authValidators.signupWithEmailSchema();
 type FormType = z.infer<typeof FormSchema>;
 
-const Signin = () => {
+const Signup = () => {
   const form = useForm<FormType>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      username: "",
       email: "",
       password: "",
     },
@@ -32,14 +35,27 @@ const Signin = () => {
   }
 
   return (
-    <AuthLayout label="Welcome Back!">
+    <AuthLayout label="Create an Account">
       <View className="mt-9 h-[200px]">
         <Form {...form}>
           <FormField
             control={form.control}
-            name="email"
+            name="username"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Username</FormLabel>
+                <FormControl>
+                  <InputWithIcon placeholder="your_username" icon={UserIcon} {...field} />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="mt-5">
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <EmailInput placeholder="user@email.com" {...field} />
@@ -61,12 +77,6 @@ const Signin = () => {
             )}
           />
 
-          <Button variant={"link"} className="self-end">
-            <Link href="/auth/forgot-password">
-              <P size="sm"> Forgot Password?</P>
-            </Link>
-          </Button>
-
           <Button
             className="mt-9"
             onPress={form.handleSubmit((data) => {
@@ -77,11 +87,11 @@ const Signin = () => {
           </Button>
 
           <View className="self-center flex-row flex items-center justify-center">
-            <P> Don&apos;t have an account?</P>
+            <P> Already have an account?</P>
             <Button variant={"link"}>
-              <Link href="/auth/sign-up" >
+              <Link href="/auth/sign-in" >
                 <P>
-                  Sign Up
+                  Sign In
                 </P>
               </Link>
             </Button>
@@ -92,4 +102,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Signup;

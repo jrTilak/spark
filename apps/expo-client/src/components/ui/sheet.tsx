@@ -34,7 +34,7 @@ export const Sheet = React.forwardRef<ActionSheetRef, SheetProps>(
         </View>
       </ActionSheet>
     );
-  }
+  },
 );
 
 Sheet.displayName = "Sheet";
@@ -48,7 +48,7 @@ export const SheetTitle = React.forwardRef<React.ElementRef<typeof H3>, SheetTit
         {children}
       </H3>
     );
-  }
+  },
 );
 
 SheetTitle.displayName = "SheetTitle";
@@ -62,7 +62,7 @@ export const SheetDescription = React.forwardRef<React.ElementRef<typeof P>, She
         {children}
       </P>
     );
-  }
+  },
 );
 
 SheetDescription.displayName = "SheetDescription";
@@ -87,7 +87,7 @@ export const SheetClose = React.forwardRef<React.ElementRef<typeof Button>, Shee
         {children}
       </Button>
     );
-  }
+  },
 );
 
 SheetClose.displayName = "SheetClose";
@@ -109,7 +109,7 @@ export const SheetAction = React.forwardRef<React.ElementRef<typeof Button>, She
         {children}
       </Button>
     );
-  }
+  },
 );
 
 SheetAction.displayName = "SheetAction";
@@ -131,7 +131,7 @@ export const SheetButton = React.forwardRef<React.ElementRef<typeof Button>, She
         {...props}
       />
     );
-  }
+  },
 );
 
 SheetButton.displayName = "SheetButton";

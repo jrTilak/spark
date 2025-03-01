@@ -1,9 +1,9 @@
 export const NAV_THEME = {
   light: {
     background: "hsl(240, 21%, 11%)", // background //done
-    border: "hsl(240 5.9% 90%)", // border
+    border: "hsl(233, 19%, 17%)", // border //done
     card: "hsl(0 0% 100%)", // card
-    notification: "hsl(0 84.2% 60.2%)", // destructive
+    notification: "hsl(0 84.2% 60.2%)", // destructive //done
     primary: "hsl(38, 100%, 50%)", // primary //done
     text: "hsl(0, 0%, 100%)", // foreground //done
   },
@@ -22,6 +22,7 @@ export const NAV_THEME = {
 export const ICON_COLORS = {
   dark: "hsl(240, 21%, 11%)",
   light: "hsl(0, 0%, 100%)",
+  muted: "hsl(0, 0%, 63.9%)",
 };
 
 export type IconColorKey = keyof typeof ICON_COLORS;

@@ -9,6 +9,7 @@ import { Text } from "@/components/ui/text";
 import { View } from "react-native";
 import { ChevronRightIcon } from "lucide-react-native";
 import { router } from "expo-router";
+import { SheetManager } from "react-native-actions-sheet";
 
 const Welcome = () => {
   return (
@@ -41,10 +42,12 @@ const Welcome = () => {
           smart, fast, and effortless.
         </P>
 
-        <Button className="w-full mt-7" size={"lg"}>
-          <Text>
-            Let&apos;s get authenticated
-          </Text>
+        <Button
+          onPress={() => SheetManager.show("login-sheet")}
+          className="w-full mt-7"
+          size={"lg"}
+        >
+          <Text>Let&apos;s get authenticated</Text>
           <Icon
             icon={ChevronRightIcon}
             color={"dark"}
@@ -53,12 +56,15 @@ const Welcome = () => {
             style={{ top: -2 }}
           />
         </Button>
-        <Button size={"lg"}
-          onPress={() => { router.push("/home") }}
-          variant={"ghost"} className="mt-2 w-full">
-          <Text className="font-medium">
-            Skip for now
-          </Text>
+        <Button
+          size={"lg"}
+          onPress={() => {
+            router.push("/home");
+          }}
+          variant={"outline"}
+          className="mt-2 w-full"
+        >
+          <Text className="font-medium">Skip for now</Text>
         </Button>
       </Container>
     </SafeAreaView>

@@ -52,9 +52,8 @@ export default function RootLayout() {
         <QueryClientProvider client={queryClient}>
           <ToastProvider>
             <SheetProvider>
-              <Stack screenOptions={{ headerShown: false }} initialRouteName="auth">
+              <Stack screenOptions={{ headerShown: false }} >
                 <Stack.Screen name="index" />
-                <Stack.Screen name="auth" />
               </Stack>
             </SheetProvider>
           </ToastProvider>

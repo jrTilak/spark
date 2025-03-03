@@ -6,23 +6,22 @@
   :root {
     --background: 240 21% 11%;
     --foreground: 0 0% 100%;
-    /* --card: 240 10% 3.9%; */
-    /* --card-foreground: 0 0% 98%; */
-    /* --popover: 240 10% 3.9%; */
-    /* --popover-foreground: 0 0% 98%; */
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
     --primary: 38 100% 50%;
     --primary-foreground: 240 21% 11%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    /* --muted: 240 3.7% 15.9%; */
+    --muted: 12 6.5% 15.1%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
-    /* --destructive-foreground: 0 84.2% 60.2%; */
+    --destructive-foreground: 60 9.1% 97.8%;
     --border: 233 19% 17%;
     --input: 233 19% 17%;
-    /* --ring: 240 4.9% 83.9%; */
   }
   /* not used */
   .dark:root {

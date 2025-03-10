@@ -1,15 +1,14 @@
-import { View } from "react-native";
+import { View, ViewProps } from "react-native";
 import React from "react";
+import { cn } from "@/lib/utils";
 
-type Props = {
-  children: React.ReactNode;
-};
+type Props = ViewProps;
 
 /**
  * Container for a page to give constant padding
  */
-const Container = ({ children }: Props) => {
-  return <View className="w-full flex justify-center items-center h-full px-4 flex-1">{children}</View>;
+const Container = ({ children, className }: Props) => {
+  return <View className={cn("w-full flex  h-full px-4 flex-1", className)}>{children}</View>;
 };
 
 export default Container;

@@ -7,7 +7,7 @@ import { View, ActivityIndicator, Dimensions, Platform } from "react-native";
 const LoadingScreen = () => {
   const osName = Platform.OS;
   const screenHeight = Dimensions.get("screen").height;
-  const colors = useColors()
+  const colors = useColors();
 
   return (
     <View

@@ -15,7 +15,7 @@ const sizes = {
 } as const;
 
 const Icon = ({ icon: IconComponent, size = "md", color, ...props }: IconProps) => {
-  const colors = useColors()
+  const colors = useColors();
 
   return (
     <IconComponent

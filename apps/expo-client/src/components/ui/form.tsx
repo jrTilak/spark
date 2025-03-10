@@ -28,9 +28,7 @@ const Form = <TFieldValues extends FieldValues = FieldValues>({
 }: FormProps<TFieldValues>) => {
   return (
     <FormProvider {...methods}>
-      <KeyboardAvoidingView className="flex flex-col">
-        {children}
-      </KeyboardAvoidingView>
+      <KeyboardAvoidingView className="flex flex-col">{children}</KeyboardAvoidingView>
     </FormProvider>
   );
 };

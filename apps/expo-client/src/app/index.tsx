@@ -16,7 +16,6 @@ const Welcome = () => {
     <SafeAreaView>
       <Container>
         <LocalImage source={"logoWithName"} className="w-[130px] h-[84px]" resizeMode="contain" />
-
         <LocalImage
           source={"onboard"}
           className="max-w-[380px] w-4/5 h-[300px] "
@@ -50,7 +49,7 @@ const Welcome = () => {
           <Text>Let&apos;s get authenticated</Text>
           <Icon
             icon={ChevronRightIcon}
-            color={"dark"}
+            color={"background"}
             size={"md"}
             className="relative"
             style={{ top: -2 }}

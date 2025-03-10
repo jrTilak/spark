@@ -4,6 +4,9 @@ import { KeyboardAvoidingView as KeyboardAvoidingViewNative, Platform } from "re
 
 type KeyboardAvoidingViewProps = React.ComponentProps<typeof KeyboardAvoidingViewNative>;
 
+/**
+ *  KeyboardAvoidingView with some default props
+ */
 const KeyboardAvoidingView: React.FC<KeyboardAvoidingViewProps> = ({
   children,
   keyboardVerticalOffset = Platform.OS === "ios" ? 64 : 0,

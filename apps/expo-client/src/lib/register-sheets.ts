@@ -1,3 +1,6 @@
+/**
+ * File to register all the sheets in the app.
+ */
 import LoginSheet from "@/components/sheets/login-sheet";
 import { registerSheet, SheetDefinition } from "react-native-actions-sheet";
 

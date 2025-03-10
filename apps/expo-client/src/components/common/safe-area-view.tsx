@@ -1,33 +1,37 @@
 import React from "react";
-import { SafeAreaView as SAV } from "react-native-safe-area-context";
+import { SafeAreaView as SafeAreaViewNative } from "react-native-safe-area-context";
 import LoadingScreen from "../loaders/loading-screen";
 import { ScrollView } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import { useColorScheme } from "@/hooks/use-color-schema";
+import KeyboardAvoidingView from "./keyboard-avoiding-view";
+import StatusBar from "./status-bar";
 
 type Props = {
   loading?: boolean;
   children: React.ReactNode;
 };
 
+/**
+ *  SafeAreaView with some default props
+ */
 const SafeAreaView = ({ loading, children }: Props) => {
-  const { isDarkColorScheme } = useColorScheme();
 
   return (
-    <SAV className="bg-background h-full">
-      <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+    <SafeAreaViewNative className="bg-background h-full">
+      <StatusBar />
       {loading ? (
         <LoadingScreen />
       ) : (
-        <ScrollView
-          contentContainerStyle={{
-            height: "100%",
-          }}
-        >
-          {children}
-        </ScrollView>
+        <KeyboardAvoidingView>
+          <ScrollView
+            contentContainerStyle={{
+              height: "100%",
+            }}
+          >
+            {children}
+          </ScrollView>
+        </KeyboardAvoidingView>
       )}
-    </SAV>
+    </SafeAreaViewNative>
   );
 };
 

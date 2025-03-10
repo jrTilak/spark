@@ -4,6 +4,9 @@ import { Text } from "../ui/text";
 import { View } from "react-native";
 import LocalImage from "@/components/common/local-image";
 
+/**
+ *  Login sheet for the app
+ */
 const LoginSheet = () => {
   return (
     <Sheet containerProps={{ className: "h-[250px] items-center justify-center" }}>
@@ -23,7 +26,6 @@ const LoginSheet = () => {
           <LocalImage source="googleIcon" className="size-6" />
           <Text>Continue with Google</Text>
         </SheetButton>
-
       </View>
     </Sheet>
   );

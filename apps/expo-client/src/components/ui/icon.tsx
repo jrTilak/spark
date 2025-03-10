@@ -1,10 +1,11 @@
-import { ICON_COLORS, IconColorKey } from "@/constants/theme";
+import { ColorName } from "@/constants/colors";
+import useColors from "@/hooks/use-colors";
 import { LucideIcon, LucideProps } from "lucide-react-native";
 
 export type IconProps = {
   icon: LucideIcon;
   size?: keyof typeof sizes | number;
-  color: IconColorKey;
+  color: ColorName;
 } & LucideProps;
 
 const sizes = {
@@ -14,10 +15,12 @@ const sizes = {
 } as const;
 
 const Icon = ({ icon: IconComponent, size = "md", color, ...props }: IconProps) => {
+  const colors = useColors()
+
   return (
     <IconComponent
       size={typeof size === "number" ? size : sizes[size]}
-      color={ICON_COLORS[color as IconColorKey] || color}
+      color={colors[color]}
       {...props}
     />
   );

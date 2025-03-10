@@ -1,10 +1,13 @@
+import { COLORS } from "@/constants/colors";
 import { useColorScheme } from "./use-color-schema";
-import { NAV_THEME } from "@/constants/theme";
 
+/**
+ *  Hook to get the current color scheme, which is according to the device's theme.
+ */
 const useColors = () => {
   const { colorScheme } = useColorScheme();
 
-  return NAV_THEME[colorScheme];
+  return COLORS[colorScheme];
 };
 
 export default useColors;

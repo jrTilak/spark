@@ -13,6 +13,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@hookform/resolvers": "^4.1.2",
+    "@react-native-async-storage/async-storage": "1.23.1",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "@rn-primitives/label": "^1.1.0",
@@ -34,6 +35,7 @@
     "expo-symbols": "~0.2.2",
     "expo-system-ui": "~4.0.8",
     "expo-web-browser": "~14.0.2",
+    "hsl-to-hex": "^1.0.0",
     "lucide-react-native": "^0.476.0",
     "nativewind": "^4.1.23",
     "react": "18.3.1",
@@ -58,6 +60,7 @@
     "@babel/core": "^7.25.2",
     "@rn-primitives/types": "^1.1.0",
     "@shared/eslint-config": "workspace:*",
+    "@types/hsl-to-hex": "^1.0.2",
     "@types/react": "~18.3.12",
     "eslint": "^9.21.0",
     "prettier": "^3.5.0",

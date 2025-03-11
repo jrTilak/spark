@@ -10,10 +10,12 @@ import Icon from "@/components/ui/icon";
 import { ChevronRightIcon } from "lucide-react-native";
 import ChipsButton from "@/components/common/chips-button";
 import { COUNTRIES } from "@/mock-data/countries";
+import { useRouter } from "expo-router";
 
 const CountryPage = () => {
   const [selectedCountries, setSelectedCountries] = useState<number[]>([]);
   const dimensions = useWindowDimensions();
+  const router = useRouter()
 
   return (
     <SafeAreaView scrollable={false}>
@@ -43,10 +45,11 @@ const CountryPage = () => {
               label={item.name}
             />
           )}
-          contentContainerClassName="gap-4 p-6"
+          contentContainerClassName="gap-6 p-6"
           style={{ height: dimensions.height - 130 }}
-          columnWrapperClassName="gap-4"
+          columnWrapperClassName="gap-6"
           numColumns={2}
+          keyExtractor={(item) => (item.id * Math.random() + new Date().getTime()).toString()}
           extraData={selectedCountries}
         />
 
@@ -55,10 +58,14 @@ const CountryPage = () => {
             You can always change your preferences later.
           </P>
           <View className="flex-row justify-between  gap-4 ">
-            <Button variant={"ghost"} className="flex-[1]">
+            <Button
+              onPress={() => router.push("/personalize/publishers")}
+              variant={"ghost"} className="flex-[1]">
               <Text>Skip</Text>
             </Button>
-            <Button disabled={selectedCountries.length === 0} className="flex-[2]">
+            <Button
+              onPress={() => router.push("/personalize/publishers")}
+              disabled={selectedCountries.length === 0} className="flex-[2]">
               <Text>Next</Text>
               <Icon
                 icon={ChevronRightIcon}

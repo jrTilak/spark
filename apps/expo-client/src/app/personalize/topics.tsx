@@ -38,7 +38,7 @@ const TopicsPage = () => {
                 });
               }}
               className={cn(
-                "flex-row items-center border border-transparent bg-card justify-between px-4 py-6 flex-1 rounded-md elevation-lg",
+                "flex-row active:opacity-40 items-center border border-transparent bg-card justify-between px-4 py-6 flex-1 rounded-md elevation-lg",
                 selectedTopics.includes(item.label) && "border-primary",
               )}
             >

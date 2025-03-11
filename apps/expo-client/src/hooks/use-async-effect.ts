@@ -3,7 +3,7 @@
  * See more about this method: https://lazykit.jrtilak.dev/docs/react-hooks/effect/useAsyncEffect
  */
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 /**
  * A custom hook that handles async operations inside `useEffect`.

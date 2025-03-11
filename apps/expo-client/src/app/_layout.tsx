@@ -12,7 +12,6 @@ import StatusBar from "@/components/common/status-bar";
 import { ToastProvider } from "react-native-toast-notifications";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 const queryClient = new QueryClient();
@@ -32,14 +31,13 @@ export default function RootLayout() {
     }
   }, [loaded, isThemeLoaded]);
 
-
   return (
     <GestureHandlerRootView>
       <ThemeProvider onThemeLoaded={() => setIsThemeLoaded(true)}>
         <QueryClientProvider client={queryClient}>
           <ToastProvider>
             <SheetProvider>
-              <Stack screenOptions={{ headerShown: false }} >
+              <Stack screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="index" />
               </Stack>
             </SheetProvider>

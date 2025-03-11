@@ -14,7 +14,7 @@ import { SheetManager } from "react-native-actions-sheet";
 const Welcome = () => {
   return (
     <SafeAreaView>
-      <Container>
+      <Container className="justify-center items-center">
         <LocalImage source={"logoWithName"} className="w-[130px] h-[84px]" resizeMode="contain" />
         <LocalImage
           source={"onboard"}
@@ -58,7 +58,7 @@ const Welcome = () => {
         <Button
           size={"lg"}
           onPress={() => {
-            router.push("/home");
+            router.push("/personalize/topics");
           }}
           variant={"outline"}
           className="mt-2 w-full"

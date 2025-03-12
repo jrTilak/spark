@@ -45,7 +45,7 @@ const PublishersPage = () => {
           <View className="flex-row justify-between gap-4 ">
             <Button
               className="flex-1"
-              onPress={() => router.push("/personalize/country")}
+              onPress={() => router.push("/home")}
             >
               <Text>Let&apos; go</Text>
               <Icon

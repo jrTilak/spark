@@ -20,7 +20,7 @@ const Icon = ({ icon: IconComponent, size = "md", color, ...props }: IconProps) 
   return (
     <IconComponent
       size={typeof size === "number" ? size : sizes[size]}
-      color={colors[color]}
+      color={colors[color] || color}
       {...props}
     />
   );

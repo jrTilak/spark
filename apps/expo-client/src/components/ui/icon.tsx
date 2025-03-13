@@ -9,6 +9,7 @@ export type IconProps = {
 } & LucideProps;
 
 const sizes = {
+  xs: 14,
   sm: 16,
   md: 20,
   lg: 24,

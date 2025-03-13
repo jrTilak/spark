@@ -1,6 +1,6 @@
-import { View, Text, Pressable, PressableProps } from 'react-native';
-import React from 'react';
-import { cn } from '@/lib/utils';
+import { View, Text, Pressable, PressableProps } from "react-native";
+import React from "react";
+import { cn } from "@/lib/utils";
 
 type ChipsButtonProps = Omit<PressableProps, "children"> & {
   icon: string;
@@ -14,7 +14,7 @@ const ChipsButton = ({ icon, label, selected, className, ...props }: ChipsButton
       className={cn(
         "flex-row active:opacity-40 items-center border border-transparent bg-card justify-between px-4 py-6 flex-1 rounded-md elevation-lg",
         selected && "border-primary",
-        className
+        className,
       )}
       {...props}
     >

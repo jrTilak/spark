@@ -15,7 +15,7 @@ import { useRouter } from "expo-router";
 const TopicsPage = () => {
   const [selectedTopics, setSelectedTopics] = useState<number[]>([]);
   const dimensions = useWindowDimensions();
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <SafeAreaView scrollable={false}>
@@ -58,12 +58,16 @@ const TopicsPage = () => {
           <View className="flex-row justify-between  gap-4 ">
             <Button
               onPress={() => router.push("/personalize/country")}
-              variant={"ghost"} className="flex-[1]">
+              variant={"ghost"}
+              className="flex-[1]"
+            >
               <Text>Skip</Text>
             </Button>
             <Button
               onPress={() => router.push("/personalize/country")}
-              disabled={selectedTopics.length === 0} className="flex-[2]">
+              disabled={selectedTopics.length === 0}
+              className="flex-[2]"
+            >
               <Text>Next</Text>
               <Icon
                 icon={ChevronRightIcon}

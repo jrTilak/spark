@@ -14,7 +14,7 @@ import { PUBLISHERS } from "@/mock-data/publishers";
 
 const PublishersPage = () => {
   const dimensions = useWindowDimensions();
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <SafeAreaView scrollable={false}>
@@ -22,16 +22,13 @@ const PublishersPage = () => {
         <View className="bg-background pb-3 p-4 pt-9">
           <H3>Your Trusted Publishers</H3>
           <P>
-            Select the publishers you trust, and we&apos;ll deliver updates from them directly to your feed.
+            Select the publishers you trust, and we&apos;ll deliver updates from them directly to
+            your feed.
           </P>
         </View>
         <FlatList
           data={PUBLISHERS}
-          renderItem={({ item }) => (
-            <PublisherChip
-              {...item}
-            />
-          )}
+          renderItem={({ item }) => <PublisherChip {...item} />}
           contentContainerClassName="gap-6 p-6"
           style={{ height: dimensions.height - 130 }}
           columnWrapperClassName="gap-4"
@@ -43,10 +40,7 @@ const PublishersPage = () => {
             You can always change your preferences later.
           </P>
           <View className="flex-row justify-between gap-4 ">
-            <Button
-              className="flex-1"
-              onPress={() => router.push("/home")}
-            >
+            <Button className="flex-1" onPress={() => router.push("/home")}>
               <Text>Let&apos; go</Text>
               <Icon
                 icon={ChevronRightIcon}

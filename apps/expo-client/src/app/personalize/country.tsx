@@ -15,7 +15,7 @@ import { useRouter } from "expo-router";
 const CountryPage = () => {
   const [selectedCountries, setSelectedCountries] = useState<number[]>([]);
   const dimensions = useWindowDimensions();
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <SafeAreaView scrollable={false}>
@@ -23,9 +23,9 @@ const CountryPage = () => {
         <View className="bg-background pb-3 p-4 pt-9">
           <H3>Preferred Countries</H3>
           <P>
-            Choose the countries you&apos;re interested in, and we&apos;ll keep you updated with the latest news from those regions.
+            Choose the countries you&apos;re interested in, and we&apos;ll keep you updated with the
+            latest news from those regions.
           </P>
-
         </View>
         <FlatList
           data={COUNTRIES}
@@ -60,12 +60,16 @@ const CountryPage = () => {
           <View className="flex-row justify-between  gap-4 ">
             <Button
               onPress={() => router.push("/personalize/publishers")}
-              variant={"ghost"} className="flex-[1]">
+              variant={"ghost"}
+              className="flex-[1]"
+            >
               <Text>Skip</Text>
             </Button>
             <Button
               onPress={() => router.push("/personalize/publishers")}
-              disabled={selectedCountries.length === 0} className="flex-[2]">
+              disabled={selectedCountries.length === 0}
+              className="flex-[2]"
+            >
               <Text>Next</Text>
               <Icon
                 icon={ChevronRightIcon}

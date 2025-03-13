@@ -9,6 +9,7 @@ export type IconProps = {
 } & LucideProps;
 
 const sizes = {
+  xs: 14,
   sm: 16,
   md: 20,
   lg: 24,
@@ -20,7 +21,7 @@ const Icon = ({ icon: IconComponent, size = "md", color, ...props }: IconProps) 
   return (
     <IconComponent
       size={typeof size === "number" ? size : sizes[size]}
-      color={colors[color]}
+      color={colors[color] || color}
       {...props}
     />
   );

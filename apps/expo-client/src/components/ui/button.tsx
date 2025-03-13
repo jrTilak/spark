@@ -17,7 +17,7 @@ const buttonVariants = cva("group flex flex-row items-center justify-center roun
       default: "h-12 px-5 py-3 native:h-12",
       sm: "h-10 rounded-md px-3",
       lg: "h-16 rounded-md px-8",
-      icon: "h-10 w-10",
+      icon: "h-12 w-12",
     },
   },
   defaultVariants: {

@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-require-imports */
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
@@ -71,7 +72,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        urbanist: ["Urbanist", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       containers: {
         "8xl": "90rem",

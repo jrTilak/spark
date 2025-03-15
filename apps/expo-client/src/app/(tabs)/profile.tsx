@@ -11,8 +11,11 @@ import { Calendar1Icon, SettingsIcon } from "lucide-react-native";
 import Icon from "@/components/ui/icon";
 import { H3 } from "@/components/ui/h3";
 import { P } from "@/components/ui/p";
+import { useRouter } from "expo-router";
 
 const Profile = () => {
+  const router = useRouter()
+
   return (
     <SafeAreaView scrollable={false}>
       <FlatList
@@ -29,7 +32,9 @@ const Profile = () => {
                   (@jrTilak)
                 </Text>
               </View>
-              <Button variant={"ghost"} size={"icon"} className="rounded-full">
+              <Button
+                onPress={() => router.push("/settings")}
+                variant={"ghost"} size={"icon"} className="rounded-full">
                 <Icon icon={SettingsIcon} color="foreground" />
               </Button>
             </View>

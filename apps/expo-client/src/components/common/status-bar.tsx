@@ -13,7 +13,7 @@ export type StatusBarProps = {
 const StatusBar = ({ hidden = false }: StatusBarProps) => {
   const { isDark } = useColorScheme();
 
-  return <ExpoStatusBar style={isDark ? "light" : "dark"} hidden={hidden} />;
+  return <ExpoStatusBar style={isDark ? "dark" : "light"} hidden={hidden} />;
 };
 
 export default StatusBar;

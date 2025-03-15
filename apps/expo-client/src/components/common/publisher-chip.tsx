@@ -16,7 +16,7 @@ const PublisherChip = (props: Props) => {
       <Text numberOfLines={1} ellipsizeMode="tail" className="text-center">
         {props.name}
       </Text>
-      <Button size={"sm"} className="w-full">
+      <Button variant={"secondary"} size={"sm"} className="w-full border-primary">
         <Text>Follow</Text>
       </Button>
     </View>

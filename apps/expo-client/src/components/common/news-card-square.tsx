@@ -36,7 +36,7 @@ export default function NewsCardSquare(props: Props) {
           </View>
 
           <View className="flex items-center justify-center gap-2 text-muted-foreground text-xs flex-row">
-            <Icon icon={Clock} size={"xs"} color="mutedForeground" />
+            <Icon icon={Clock} size={"xs"} color="muted-foreground" />
             <Text className="text-sm text-muted-foreground">3 days ago</Text>
           </View>
         </View>
@@ -44,13 +44,13 @@ export default function NewsCardSquare(props: Props) {
         <View className="flex items-center justify-between mt-3 pt-3 border-t border-border flex-row">
           <View className="flex items-center gap-5 flex-row">
             <View className="flex items-center gap-1 flex-row">
-              <Icon icon={Eye} size={"sm"} color="mutedForeground" />
+              <Icon icon={Eye} size={"sm"} color="muted-foreground" />
               <Text className="text-xs text-muted-foreground">
                 {num.formatAsK(props.viewsCount)}
               </Text>
             </View>
             <View className="flex items-center gap-1 flex-row">
-              <Icon icon={MessageSquare} size={"sm"} color="mutedForeground" />
+              <Icon icon={MessageSquare} size={"sm"} color="muted-foreground" />
               <Text className="text-xs text-muted-foreground">
                 {num.formatAsK(props.commentCount)}
               </Text>
@@ -58,7 +58,7 @@ export default function NewsCardSquare(props: Props) {
           </View>
 
           <Button size={"icon"} variant={"ghost"} className="p-1 rounded-full hover:bg-accent">
-            <Icon icon={Share2} size={"sm"} color="mutedForeground" />
+            <Icon icon={Share2} size={"sm"} color="muted-foreground" />
           </Button>
         </View>
       </CardContent>

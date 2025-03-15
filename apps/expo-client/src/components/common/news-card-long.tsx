@@ -43,19 +43,19 @@ export default function NewsCardLong({ className, ...props }: Props) {
         <View className="flex items-center justify-between flex-row w-full">
           <View className="flex items-center gap-4 text-sm text-muted-foreground flex-row">
             <View className="flex items-center gap-1 flex-row">
-              <Icon icon={ClockIcon} color="mutedForeground" size={"sm"} />
+              <Icon icon={ClockIcon} color="muted-foreground" size={"sm"} />
               <Text className="text-xs text-muted-foreground">1 min ago</Text>
             </View>
 
             <View className="flex items-center gap-1 flex-row">
-              <Icon icon={EyeIcon} color="mutedForeground" size={"sm"} />
+              <Icon icon={EyeIcon} color="muted-foreground" size={"sm"} />
               <Text className="text-xs text-muted-foreground">
                 {num.formatAsK(props.viewsCount)}
               </Text>
             </View>
 
             <View className="flex items-center gap-1 flex-row">
-              <Icon icon={MessageSquare} color="mutedForeground" size={"sm"} />
+              <Icon icon={MessageSquare} color="muted-foreground" size={"sm"} />
               <Text className="text-xs text-muted-foreground">
                 {num.formatAsK(props.commentCount)}
               </Text>
@@ -64,7 +64,7 @@ export default function NewsCardLong({ className, ...props }: Props) {
 
           <View className="flex items-center gap-2 flex-row">
             <Button variant="ghost" size="icon" className="rounded-full">
-              <Icon icon={Share2} color="mutedForeground" size={"sm"} />
+              <Icon icon={Share2} color="muted-foreground" size={"sm"} />
             </Button>
           </View>
         </View>

@@ -71,7 +71,7 @@ const TopicsPage = () => {
               <Text>Next</Text>
               <Icon
                 icon={ChevronRightIcon}
-                color={"background"}
+                color={"foreground"}
                 size={"md"}
                 className="relative"
                 style={{ top: -2 }}

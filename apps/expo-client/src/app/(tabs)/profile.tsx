@@ -94,7 +94,7 @@ const Profile = () => {
 
               {/* joined on */}
               <View className="flex items-center gap-1 flex-row">
-                <Icon icon={Calendar1Icon} color="mutedForeground" size={"sm"} />
+                <Icon icon={Calendar1Icon} color="muted-foreground" size={"sm"} />
                 <Text className="text-sm text-muted-foreground">Joined 1 min ago</Text>
               </View>
             </View>

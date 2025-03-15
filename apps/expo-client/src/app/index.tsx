@@ -10,12 +10,15 @@ import { View } from "react-native";
 import { ChevronRightIcon } from "lucide-react-native";
 import { router } from "expo-router";
 import { SheetManager } from "react-native-actions-sheet";
+import { useColorScheme } from "@/hooks/use-color-schema";
 
 const Welcome = () => {
+  const { isDark } = useColorScheme()
+
   return (
     <SafeAreaView>
       <Container className="justify-center items-center">
-        <LocalImage source={"logoWithName"} className="w-[130px] h-[84px]" resizeMode="contain" />
+        <LocalImage source={isDark ? "logoWithName" : "logoWithNameDark"} className="w-[130px] h-[84px]" resizeMode="contain" />
         <LocalImage
           source={"onboard"}
           className="max-w-[380px] w-4/5 h-[300px] "
@@ -49,7 +52,7 @@ const Welcome = () => {
           <Text>Let&apos;s get authenticated</Text>
           <Icon
             icon={ChevronRightIcon}
-            color={"background"}
+            color={"foreground"}
             size={"md"}
             className="relative"
             style={{ top: -2 }}

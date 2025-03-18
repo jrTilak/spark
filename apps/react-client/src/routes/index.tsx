@@ -9,7 +9,8 @@ function Index() {
     <div className="p-2">
       <h3>Welcome Home!</h3>
       <Link to="/login">Goto login</Link> <br />
-      <Link to="/favourite-topics">Favourite Topics</Link>
+      <Link to="/favourite-topics">Favourite Topics</Link> <br/>
+      <Link to="/preferred-countries">Preferred Countries</Link>
     </div>
   );
 }

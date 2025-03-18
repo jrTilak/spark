@@ -54,7 +54,7 @@ export function LoginModal() {
               )}
               {isAuthenticating ? "Authenticating..." : "Continue with Google"}
             </Button>
-          </DialogFooter>
+          </DialogFooter> 
         </DialogContent>
       </Dialog>
     </>

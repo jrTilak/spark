@@ -8,7 +8,7 @@ type Props = Publisher;
 
 const PublisherChip = (props: Props) => {
   return (
-    <View className="flex-1 items-center justify-center gap-2">
+    <View className="flex-1 items-center justify-center gap-2 h-48">
       <Avatar alt={props.name} className="w-20 h-20">
         <AvatarImage source={{ uri: props.icon }} />
         <AvatarFallback>{props.name}</AvatarFallback>

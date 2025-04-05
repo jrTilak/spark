@@ -17,7 +17,7 @@ const Profile = () => {
   const router = useRouter()
 
   return (
-    <SafeAreaView scrollable={false}>
+    <SafeAreaView>
       <FlatList
         data={NEWS}
         ListHeaderComponent={
@@ -40,7 +40,7 @@ const Profile = () => {
             </View>
 
             <View className="flex-row gap-6 items-end">
-              <Avatar className="size-32 rounded-md" alt="name">
+              <Avatar className="h-20 w-20 rounded-md" alt="name">
                 <AvatarImage
                   source={{
                     uri: "https://gravatar.com/avatar/1292ff8df7042930cc44df5a9da5583d?s=400&d=robohash&r=g",
@@ -77,7 +77,7 @@ const Profile = () => {
                     </Text>
                   </View>
                 </View>
-                <Button className="w-full" variant={"outline"} >
+                <Button size={"sm"} className="w-full" variant={"outline"} >
                   <Text>
                     Edit Profile
                   </Text>

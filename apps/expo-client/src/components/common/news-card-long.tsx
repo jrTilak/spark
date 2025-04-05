@@ -17,9 +17,9 @@ export default function NewsCardLong({ className, ...props }: Props) {
   return (
     <Card className={cn("w-full p-4", className)}>
       <CardContent className="p-0 flex gap-4 items-start w-full">
-        <View className="flex-row">
-          <View className="w-[70%] gap-2.5">
-            <H3 numberOfLines={2} ellipsizeMode="tail" className="text-2xl">
+        <View className="flex-row gap-4">
+          <View className="flex-1 gap-2.5">
+            <H3 numberOfLines={2} ellipsizeMode="tail" className="text-xl">
               {props.title}
             </H3>
             <View className="flex items-center gap-3 flex-row h-fit">
@@ -35,7 +35,7 @@ export default function NewsCardLong({ className, ...props }: Props) {
               source={require("@/mock-data/watch.png")}
               alt="Technology equipment"
               resizeMethod="scale"
-              className="w-full h-full"
+              className="w-full h-full rounded-md"
               resizeMode="cover"
             />
           </View>

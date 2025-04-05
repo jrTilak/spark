@@ -12,6 +12,7 @@ import React from 'react'
 import { View } from 'react-native'
 
 const Settings = () => {
+
   const { isDark, toggleColorScheme } = useColorScheme()
 
   return (
@@ -36,14 +37,15 @@ const Settings = () => {
         <View className='justify-center items-center p-6 gap-12'>
           <View className='flex-row items-center gap-2 justify-between w-full'>
             <Label
-              nativeID='airplane-mode'
+              nativeID='dark-mode'
               onPress={() => {
                 toggleColorScheme()
               }}
-              className='flex flex-row items-center gap-2'
+              className='flex flex-row items-center justify-center gap-2'
             >
               <Icon icon={MoonIcon} color='foreground' />
-              <Text className='text-lg ml-2'>
+              <Text className='text-lg ml-2'
+              >
                 Dark Mode
               </Text>
             </Label>
@@ -51,7 +53,9 @@ const Settings = () => {
               () => {
                 toggleColorScheme()
               }
-            } nativeID='airplane-mode' />
+            }
+              nativeID='dark-mode'
+            />
           </View>
         </View>
       </Container>

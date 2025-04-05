@@ -3,6 +3,7 @@ import { Sheet, SheetButton, SheetDescription, SheetTitle } from "../ui/sheet";
 import { Text } from "../ui/text";
 import { View } from "react-native";
 import LocalImage from "@/components/common/local-image";
+import { Link } from "expo-router";
 
 /**
  *  Login sheet for the app
@@ -26,6 +27,19 @@ const LoginSheet = () => {
           <LocalImage source="googleIcon" className="size-6" />
           <Text>Continue with Google</Text>
         </SheetButton>
+
+        <Text className="text-sm text-muted-foreground mt-2 text-center">
+          By continuing, you agree to our <Link href={"/"}>
+            <Text className="text-sm text-muted-foreground underline" >
+              Terms of Service
+            </Text>
+          </Link> and <Link href={"/"} >
+            <Text className="underline text-sm text-muted-foreground " >
+              Privacy Policy
+            </Text>
+          </Link>.
+        </Text>
+
       </View>
     </Sheet>
   );

@@ -11,9 +11,14 @@ import { ChevronRightIcon } from "lucide-react-native";
 import { router } from "expo-router";
 import { SheetManager } from "react-native-actions-sheet";
 import { useColorScheme } from "@/hooks/use-color-schema";
+import { useEffect } from "react";
 
 const Welcome = () => {
-  const { isDark } = useColorScheme()
+  const { isDark, setColorScheme } = useColorScheme()
+
+  useEffect(() => {
+    setColorScheme("light")
+  }, [])
 
   return (
     <SafeAreaView>
@@ -52,7 +57,7 @@ const Welcome = () => {
           <Text>Let&apos;s get authenticated</Text>
           <Icon
             icon={ChevronRightIcon}
-            color={"foreground"}
+            color={"primary-foreground"}
             size={"md"}
             className="relative"
             style={{ top: -2 }}
